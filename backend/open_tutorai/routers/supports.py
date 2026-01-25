@@ -511,4 +511,7 @@ async def delete_support(
         raise
     except Exception as e:
         log.error(f"Error deleting support request: {str(e)}")
-        raise HTTPException(status_code=500, detail=f"Failed to delete support request: {str(e)}")
+raise HTTPException(
+    status_code=500,
+    detail=f"Failed to delete support request: {str(e)}",
+)
